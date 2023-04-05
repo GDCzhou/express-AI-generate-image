@@ -4,7 +4,7 @@ const configuration = new Configuration({
   apiKey: process.env.OPENAI_KEY,
 });
 const openai = new OpenAIApi(configuration);
-console.log(process.env.OPENAI_KEY);
+console.log('configuration: ',configuration);
 const generateImage = async (req, res) => {
   console.log('请求来了....');
   const { prompt, size } = req.body;
